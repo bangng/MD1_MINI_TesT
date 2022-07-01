@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<img src="hinh-anh-con-bo-de-thuong.jpg" id="bo" style="width: 200px; position: absolute; left:0px;top: 0px">
+<img src="shikamaru.jpg" id="shi" style="width: 200px; position: absolute;top: 0px;left: 500px">
+<script>
+    let boimg= document.getElementById('bo');
+    let shiimg = document.getElementById('shi');
+    document.addEventListener('keydown',move);
+    function move(evt){
+        switch (evt.keyCode) {
+            case 39:
+                if(parseInt(boimg.style.left) + parseInt(boimg.style.width) < parseInt(shiimg.style.left)){
+                    moveRight();
+                } else {
+                    alert('heluhelu');
+                    alert('Mày hả Bưởi');
+                    document.getElementById('shi').src = 'shize.png';
+                }
+                break;
+            case 37:
+                moveLeft();
+
+                break;
+            case 38:
+                if(parseInt(boimg.style.left) + parseInt(boimg.style.width) < parseInt(shiimg.style.left)){
+                    moveUp();
+                } else {
+                    alert('muahaha');
+                    alert('Chết Cha Mày');
+                    document.getElementById('shi').src = 'shize.png';
+                }
+                break;
+            case 40:
+                moveDown();
+                break;
+        }
+    }
+
+    function moveLeft() {
+        boimg.style.left = parseInt(boimg.style.left) - 15 + 'px';
+    }
+
+    function moveRight() {
+        boimg.style.left = parseInt(boimg.style.left) + 15 + 'px';
+    }
+    function moveUp() {
+        boimg.style.top= parseInt(boimg.style.top) -15 + 'px';
+    }
+    function moveDown() {
+
+        boimg.style.top= parseInt(boimg.style.top) +15 + 'px';
+    }
+
+</script>
+
+
+
+}
+    }
+</script>
+</body>
+</html>

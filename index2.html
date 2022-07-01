@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Xác Định Tam Giác Vuông</h1>
+<input type="text" id="canh1"> cạnh1<br>
+<input type="text" id="canh2"> cạnh2<br>
+<input type="text" id="canh3"> cạnh 3<br>
+<button id="ketQua()" onclick="ketQua()">Kết Quả</button>
+<p id="result">result</p>
+
+
+<script>
+function ketQua(){
+    let canh1 = +document.getElementById('canh1').value;
+    let canh2 = +document.getElementById('canh2').value;
+    let canh3 = +document.getElementById('canh3').value;
+    if (canh1>0&& canh2>0 && canh3>0){
+        if ((canh1*canh1+canh2*canh2)==canh3*canh3){
+            document.getElementById('result').innerText='tam giác vuông';
+            else{
+                document.getElementById('result').innerText='tam giác thường';
+            }
+
+        }
+
+
+
+    }
+
+}
+
+</script>
+</body>
+</html>
