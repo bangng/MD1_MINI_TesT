@@ -7,7 +7,7 @@
 </head>
 <body>
 <img src="hinh-anh-con-bo-de-thuong.jpg" id="bo" style="width: 200px; position: absolute; left:0px;top: 0px">
-<img src="shikamaru.jpg" id="shi" style="width: 200px; position: absolute;top: 0px;left: 500px">
+<img src="shikamaru.jpg" id="shi" style="width: 200px; position: absolute;top: 0px;left: 500px;">
 <script>
     let boimg= document.getElementById('bo');
     let shiimg = document.getElementById('shi');
@@ -28,7 +28,7 @@
 
                 break;
             case 38:
-                if(parseInt(boimg.style.left) + parseInt(boimg.style.width) < parseInt(shiimg.style.left)){
+                if(parseInt(boimg.style.top) + parseInt(boimg.style.width) < parseInt(shiimg.style.top)){
                     moveUp();
                 } else {
                     alert('muahaha');
@@ -60,9 +60,5 @@
 </script>
 
 
-
-}
-    }
-</script>
 </body>
 </html>
